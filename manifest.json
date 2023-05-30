@@ -1,0 +1,27 @@
+{
+  "name": "Ziteboard Pro",
+  "version": "2.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Ziteboard Pro"
+  },
+  "description": "Usa todas las funciones de Ziteboard pro sin pagar",
+  "background": {
+    "service_worker": "./js/background.js"
+  },
+  "icons": {
+    "16": "./img/logo/logo.png",
+    "32": "./img/logo/logo.png",
+    "48": "./img/logo/logo.png",
+    "128": "./img/logo/logo.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://app.ziteboard.com/*"],
+      "js": ["./js/pagescript.js"]
+    }
+  ]
+}
